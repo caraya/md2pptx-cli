@@ -1,0 +1,32 @@
+{
+  "name": "md2pptx-cli",
+  "version": "1.0.0",
+  "description": "Convert Markdown to PowerPoint via marked + PptxGenJS",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "md2pptx": "dist/index.js"
+  },
+  "overrides": {
+    "esbuild": "^0.25.8"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc && sed -i '' '1s|.*|#!/usr/bin/env node|' dist/index.js",
+    "test": "playwright test"
+  },
+  "dependencies": {
+    "marked": "^5.1.1",
+    "pptxgenjs": "^3.9.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.38.0",
+    "@types/marked": "^5.0.2",
+    "@types/node": "^20.0.0",
+    "tsx": "^3.12.7",
+    "typescript": "^5.1.6"
+  }
+}
