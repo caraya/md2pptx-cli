@@ -19,7 +19,7 @@
     "test": "playwright test"
   },
   "dependencies": {
-    "marked": "^5.1.1",
+    "marked": "^16.0.0",
     "pptxgenjs": "^3.9.0"
   },
   "devDependencies": {
